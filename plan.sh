@@ -5,7 +5,7 @@ URL="http://fsg-preetz.de/downloads/protected/vertretungsplan.html"
 CLASS="Q1B"
 TMP="plan.tmp"
 OLD="plan.old"
-SUBJECT="Neuer Eintrag im Vertretungsplan!"
+SUBJECT="Neuer Eintrag im Vertretungsplan!\nContent-Type: text/html"
 MAIL="anton.bracke.com@gmail.com"
 ##############
 
