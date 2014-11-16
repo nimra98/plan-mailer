@@ -11,9 +11,9 @@ MAIL="anton.bracke.com@gmail.com"
 
 wget "$URL" -q -O "$TMP"
 
-ENTRY=$(grep "$CLASS" "$TMP")
+ENTRY=$(grep -i "$CLASS" "$TMP")
 
-if grep -q "$CLASS" "$TMP"
+if grep -q -i "$CLASS" "$TMP"
 then
 	echo "found"
 	DAY=$(cat $TMP | grep "<p class=\"Titel\">")
@@ -21,7 +21,7 @@ then
 	echo "day: $DAY"
 	echo "entry: $ENTRY"
     # code if found
-	if grep -q "$DAY :-:-: $ENTRY" "$OLD"
+	if grep -q -i "$DAY :-:-: $ENTRY" "$OLD"
 	then
 		echo "already mailed!"
 	else
@@ -32,3 +32,4 @@ then
 	fi
 fi
 rm "$TMP"
+
